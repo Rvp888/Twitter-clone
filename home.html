@@ -14,11 +14,12 @@
     <body>
 
       <div class="wrapper">
-
-        <div class="left-sidebar"> 
+        <!---------------------- left-sidebar ------------------------------------------------>
+        <section class="left-sidebar"> 
             <div class="logo">
                 <img src="./images/twitter-icon.svg" alt="twitter-icon" />
             </div>
+            <!---------------------- left-sidebar-navbar ------------------->
             <div class="navbar">
                 <div class="nav-item">
                     <svg viewBox="0 0 24 24" class="nav-item-svg">
@@ -121,15 +122,17 @@
                   <p id="profile-logOut">Log out <span id="profile-userId">@RohanVP8</span></p>
                 </div>
             </div>
-        </div>
-
-        <div class="main-content">
+        </section>
+        <!---------------------- main-content ------------------------------------------------>
+        <section class="main-content">
+          <!---------------------- main-content-header ----------------------------->
           <div class="header">
             <h1>Home</h1>
             <button>
               <img src="./images/stars-icon.svg" alt=""/>
             </button>
           </div>
+          <!---------------------- main-content-post-box ----------------------------->
           <div class="post-box">
             <div class="post-box-image">
               <img
@@ -162,54 +165,21 @@
               </button>
             </div>
           </div>
+          <!---------------------- main-content-tweet-body ----------------------------->
           <div id="tweet-body">
-            <!-- <div class="tweets">
-              <div class="tweet-profile-image">
-                <img
-                  src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
-                  alt="profile image"
-                />
-              </div>
-              <div class="tweet">
-                <div class="tweet-header">
-                  <div class="tweet-user-info">
-                    <p><strong>Rohan Roshan</strong></p>
-                    <p>@rohanroshan</p>
-                    <p>19 Dec, 2022</p>
-                  </div>
-                  <div class="tweet-three-dots-menu">
-                    <button>
-                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          fill="#5b7083"
-                          d="M16.5 10.25c-.965 0-1.75.787-1.75 1.75s.784 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.786-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.966 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75 1.75-.786 1.75-1.75-.784-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75zm-4.5-2.5c-.965 0-1.75.787-1.75 1.75s.785 1.75 1.75 1.75c.964 0 1.75-.786 1.75-1.75s-.787-1.75-1.75-1.75zm0 2.5c-.414 0-.75-.336-.75-.75 0-.413.337-.75.75-.75s.75.336.75.75c0 .413-.336.75-.75.75z"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="tweet-body">
-                  <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima hic praesentium minus! Earum vero, nulla quam corrupti laudantium sequi aperiam rerum, temporibus alias nostrum veniam delectus officiis et? Voluptatum, qui!
-                  </span>
-                  <div class="tweet-image">
-                    <img
-                      src="https://images.pexels.com/photos/3225529/pexels-photo-3225529.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
+            
           </div>
-        </div>
-
-        <div class="right-sidebar">
+        </section>
+        <!---------------------- right-sidebar ------------------------------------------------>
+        <section class="right-sidebar">
+          <!---------------------- right-sidebar-search-div -------------->
           <div class="search-div">
             <i class="fa fa-search" id="search-twitter-icon"></i>
             <input type="text" placeholder="Search Twitter" id="search-twitter-input">
           </div>
+          <!---------------------- right-sidebar-happ-who-div -------------->
           <div class="happ-who-div">
+            <!------------------ happ-who-div-whats-happening -------------->
             <div class="whats-happening-container">
               <h3 class="whats-happening-heading">What's happening</h3>
               <div class="happening-news-div">
@@ -239,8 +209,16 @@
               <div class="happening-news-div">
                 <div class="happening-details">
                   <p id="happening-category">Sports Trending</p>
-                  <p id="happening-hashTag">#RIP King</p>
-                  <p id="happening-tweets">193K Tweets</p>
+                  <p id="happening-hashTag">#Virat Kohli</p>
+                  <p id="happening-tweets">111K Tweets</p>
+                </div>
+                <i class="bi bi-three-dots" id="happening-three-dots"></i>
+              </div>
+              <div class="happening-news-div">
+                <div class="happening-details">
+                  <p id="happening-category">Entertainment Trending</p>
+                  <p id="happening-hashTag">#Akshay Kumar</p>
+                  <p id="happening-tweets">72K Tweets</p>
                 </div>
                 <i class="bi bi-three-dots" id="happening-three-dots"></i>
               </div>
@@ -248,6 +226,7 @@
                 <p id="happening-show-more">Show more</p>
               </div>
             </div>
+            <!------------------ happ-who-div-who-toFollow ----------------->
             <div class="who-toFollow-container">
               <h3 class="who-toFollow-heading">Who to follow</h3>
               <div class="who-toFollow-div">
@@ -286,8 +265,7 @@
             </div>
           </div>
           
-        </div>
-
+        </section>
       </div>
         
     </body>
