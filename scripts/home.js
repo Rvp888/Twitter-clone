@@ -3,6 +3,8 @@
 let tweetOffset = 0;
 let runningCriticalFunction = false;
 
+/*================= Function to get Tweets ==================================================================================*/
+
 async function getTweetsAndInsertHTML() {
     if(runningCriticalFunction) {
         return;
@@ -96,6 +98,7 @@ window.onload = async () => {
 }
 
 
+/*================= Function to Create Tweet ==================================================================================*/
 
 document.addEventListener('click', async (event) => {
     if(event.target.classList.contains('tweet-post-btn')) {
@@ -126,6 +129,7 @@ document.addEventListener('click', async (event) => {
         alert(tweet.message);
     }
 
+/*================= Function to Delete Tweet ==================================================================================*/
 
     if(event.target.classList.contains('tweet-delete')) {
 
@@ -157,7 +161,7 @@ document.addEventListener('click', async (event) => {
         }
     }
 
-
+/*================= Function to Update Tweet ==================================================================================*/
 
     if(event.target.classList.contains('tweet-edit')) {
         const tweetId = event.target.getAttribute('data-id');
@@ -195,6 +199,7 @@ document.addEventListener('click', async (event) => {
 }) 
 
 
+/*================= Function to get Tweets on Scroll ==================================================================================*/
 
 window.addEventListener('scroll', () => {
     const {
@@ -203,12 +208,81 @@ window.addEventListener('scroll', () => {
         clientHeight
     } = document.documentElement;
 
-    // console.log(scrollTop, scrollHeight, clientHeight);
-
     if((scrollTop + clientHeight) >= (scrollHeight - 20)) {
         getTweetsAndInsertHTML();
     }
 })
+
+
+/*===================================================================================================================================*/
+
+
+
+
+let users = [
+
+    {
+        userName: "Rohan Palankar",
+        userEmail: "rohanpalankar8@gmail.com",
+        userId: "@RohanVP8",
+        userImg: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        userName: "Rahul Shinde",
+        userEmail: "rahul@gmail.com",
+        userId: "@Rahul",
+        userImg: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    }
+
+]
+
+
+let loginEmail = localStorage.getItem("twitterLoginEmail");
+
+
+users.forEach((user) => {
+
+    if(user.userEmail == loginEmail){
+        document.querySelector("#navbar-profile-img").src = user.userImg;
+        document.querySelector("#navbar-profile-name").innerText = user.userName;
+        document.querySelector("#navbar-profile-id").innerText = user.userId;
+        document.querySelector("#profile-userId").innerText = user.userId;
+        document.querySelector("#postBox-profile-img").src = user.userImg;
+    }
+
+})
+
+
+
+
+
+
+/*=============================== Function to Logout =================================*/
+
+const ThreeDotsProfile = document.getElementById("profile-threeDots");
+const profileThreeDotsPopUp = document.getElementById("profile-threeDots-popUp");
+const profileLogOut = document.getElementById("profile-logOut");
+
+
+document.addEventListener("click", (e) => {
+
+    if (e.target.id == "profile-threeDots"){
+        profileThreeDotsPopUp.style.display = "block";
+    } else {
+        profileThreeDotsPopUp.style.display = "none";
+    }
+    
+})
+
+
+profileLogOut.addEventListener("click", () => {
+
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 1000);
+    
+})
+
 
 
 
