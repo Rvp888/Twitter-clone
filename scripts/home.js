@@ -81,11 +81,11 @@ async function getTweetsAndInsertHTML() {
                     </span>
                 </div>
                 <div class="tweet-footer-icons">
-                    <span class="material-icons">bar_chart</span>
-                    <span class="material-icons">chat_bubble_outline</span>
-                    <span class="material-icons">repeat</span>
-                    <span class="material-icons">favorite_border</span>
-                    <span class="material-icons">file_upload</span>
+                    <span class="material-icons" title="View">bar_chart</span>
+                    <span class="material-icons" title="Reply">chat_bubble_outline</span>
+                    <span class="material-icons" title="Retweet">repeat</span>
+                    <span class="material-icons" title="Like">favorite_border</span>
+                    <span class="material-icons" title="Share">file_upload</span>
                 </div>
             </div>
         </div>`
@@ -305,3 +305,23 @@ function myFunction() {
 
 
 
+/*=================== Home to Profile navigation =====================*/ 
+
+
+const profile_logo = document.getElementById("nav-item-profile");
+const profile_left_arrow = document.getElementById("profile-left-arrow");
+const home_content = document.querySelector(".home-content");
+const profile_content = document.querySelector(".profile-content");
+
+
+
+
+profile_logo.addEventListener("click", () => {
+    home_content.style.display = "none";
+    profile_content.style.display = "block";
+});
+
+profile_left_arrow.addEventListener("click", () => {
+    profile_content.style.display = "none";
+    home_content.style.display = "block";
+});

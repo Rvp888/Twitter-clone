@@ -166,7 +166,13 @@ img {
     margin-left: 50px;
 }
 
-/*======================== Main-Content-header ========================*/
+.home-content {
+    /* width: 600px; */
+    /* margin-left: 50px; */
+    /* display: none; */
+}
+
+/*======================== Home-Content-header ========================*/
 
 .header {
     background-color: rgba(255, 255, 255, 0.963);
@@ -177,6 +183,7 @@ img {
     height: 50px;
     border: 1px solid rgb(235, 238, 240);
     position: fixed;
+    top: 0;
     cursor: pointer;
 }
 
@@ -202,7 +209,7 @@ img {
     transition: background-color 0.5s;
 }
 
-/*======================== Main-Content-post-box ========================*/
+/*======================== Home-Content-post-box ========================*/
 
 .post-box {
     margin-top: 50px;
@@ -450,6 +457,53 @@ img {
     color: rgb(29, 161, 242);
     background-color: #ddeefd;
 }
+
+
+
+/*================================ Profile-content ======================================*/
+
+.profile-content {
+    width: 600px;
+    background-color: white;
+    height: 100vh;
+    border: 1px solid rgb(235, 238, 240);
+    display: none;
+}
+
+.profile-header {
+    height: 60px;
+    border: 1px solid rgb(235, 238, 240);
+    display: flex;
+    align-items: center;
+}
+
+.profile-header i {
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 6px 7px;
+}
+
+.profile-header i:hover {
+    background-color: #bec4c9;
+    border-radius: 50%;
+}
+
+.name-tweets {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+}
+
+.name-tweets p {
+    font-size: 13px;
+    color: #515961;   
+}
+
+
 
 
 
