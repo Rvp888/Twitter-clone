@@ -113,6 +113,7 @@ img {
     width: 50px;
     border-radius: 50%;
     margin-right: 5px; 
+    border: 1px solid rgb(192, 194, 196);
 }
 
 #navbar-profile-name {
@@ -236,6 +237,7 @@ img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    border: 1px solid rgb(192, 194, 196);
 }
 
 .post-box-image img:hover {
@@ -404,6 +406,7 @@ img {
     height: 200px;
     width: 100%;
     border-radius: 10px;
+    border: 1px solid rgb(192, 194, 196);
 }
 
 #tweet-three-dots{
@@ -486,8 +489,9 @@ img {
 }
 
 .profile-header i:hover {
-    background-color: #bec4c9;
+    background-color: rgb(207, 217, 222);
     border-radius: 50%;
+    transition: background 0.3s;
 }
 
 .name-tweets {
@@ -501,6 +505,104 @@ img {
 .name-tweets p {
     font-size: 13px;
     color: #515961;   
+}
+
+.profile-body {
+    height: 65%;
+    border: 1px solid rgb(235, 238, 240);
+}
+
+.coverPhoto-div {
+    background: rgb(207, 217, 222);
+    background-image: url("https://images.unsplash.com/photo-1608592077365-c6399182e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bGFuZHNjYXBlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: 100% 100%;
+    height: 40%;
+}
+
+.profile-details-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.profile-details-left {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-details-img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    outline: 4px solid white;
+    margin-top: -70px;
+    border: 1px solid rgb(192, 194, 196);
+}
+
+#profile-details-img:hover {
+    filter: grayscale(20%);
+    /* filter: brightness(80%); */
+    transition: filter 1s;
+}
+
+#profile-details-name {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#profile-details-id {
+    font-size: 15px;
+    margin-top: 5px;
+    color: rgb(124, 124, 125);
+}
+
+#profile-details-profession {
+    font-size: 17px;
+    margin-top: 15px;
+    color: rgb(37, 37, 38);
+}
+
+#location-n-date {
+    margin-top: 15px;
+    font-size: 15px;
+    color: rgb(124, 124, 125);
+}
+
+#location-n-date span {
+    margin: 0 15px 0 5px;
+}
+
+#profile-followers-div {
+    color: rgb(124, 124, 125);
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+#profile-following, #profile-followers {
+    color: black;
+    margin-right: 5px;
+}
+
+#profile-followers {
+    margin-left: 15px;
+}
+
+
+
+.edit-profile-btn {
+    font-size: 15px;
+    padding: 7px 15px;
+    font-weight: bold;
+    background: white;
+    border: 1px solid rgb(192, 194, 196);
+    border-radius: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    background: rgb(235, 238, 240);
+    transition: background 0.3s;
 }
 
 

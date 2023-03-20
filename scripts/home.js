@@ -225,13 +225,23 @@ let users = [
         userName: "Rohan Palankar",
         userEmail: "rohanpalankar8@gmail.com",
         userId: "@RohanVP8",
-        userImg: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        userImg: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        userProfession: "Web Developer",
+        userLocation: "India",
+        userJoinDate: "Joined December 2022",
+        userFollowing: 16,
+        userFollowers: 0,
     },
     {
         userName: "Rahul Shinde",
         userEmail: "rahul@gmail.com",
         userId: "@Rahul",
-        userImg: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        userImg: "https://images.unsplash.com/photo-1608389769338-3d5ceb3c1bc4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHlvdW5nJTIwbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        userProfession: "Pharmacist",
+        userLocation: "France",
+        userJoinDate: "Joined February 2023",
+        userFollowing: 35,
+        userFollowers: 10
     }
 
 ]
@@ -248,6 +258,21 @@ users.forEach((user) => {
         document.querySelector("#navbar-profile-id").innerText = user.userId;
         document.querySelector("#profile-userId").innerText = user.userId;
         document.querySelector("#postBox-profile-img").src = user.userImg;
+        document.querySelector("#profile-header-name").innerText = user.userName;
+        document.querySelector("#profile-details-img").src = user.userImg;
+        document.querySelector("#profile-details-name").innerText = user.userName;
+        document.querySelector("#profile-details-id").innerText = user.userId;
+        document.querySelector("#profile-details-profession").innerText = user.userProfession;
+        document.querySelector("#profile-joinDate").innerText = user.userJoinDate;
+        document.querySelector("#profile-location").innerText = user.userLocation;
+        document.querySelector("#profile-following").innerText = user.userFollowing;
+        document.querySelector("#profile-followers").innerText = user.userFollowers;
+        document.querySelector("#profile-details-img-anchor").href = user.userImg;
+        
+        // document.querySelector("#profile-details-img").addEventListener("click", () => {
+        //     window.location.href = user.userImg;
+        // })
+
     }
 
 })
@@ -312,16 +337,29 @@ const profile_logo = document.getElementById("nav-item-profile");
 const profile_left_arrow = document.getElementById("profile-left-arrow");
 const home_content = document.querySelector(".home-content");
 const profile_content = document.querySelector(".profile-content");
+const post_box_image = document.querySelector(".post-box-image");
 
 
 
 
 profile_logo.addEventListener("click", () => {
+    profile_logo.style.fontWeight = "bold";
     home_content.style.display = "none";
     profile_content.style.display = "block";
 });
 
 profile_left_arrow.addEventListener("click", () => {
+    profile_logo.style.fontWeight = "lighter";
     profile_content.style.display = "none";
     home_content.style.display = "block";
 });
+
+post_box_image.addEventListener("click", () => {
+    profile_logo.style.fontWeight = "bold";
+    home_content.style.display = "none";
+    profile_content.style.display = "block";
+});
+
+
+
+
