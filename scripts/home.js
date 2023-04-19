@@ -14,7 +14,7 @@ async function getTweetsAndInsertHTML() {
 
     const tweets = await result.json();
 
-    console.log(tweets.data);
+    console.log('tweets.data',tweets.data);
 
     tweetOffset = tweetOffset + tweets.data.length;
 
@@ -26,23 +26,27 @@ async function getTweetsAndInsertHTML() {
         timeDiff = Math.round(timeDiff/1000);
 
         if (timeDiff < 60) {
-            showTime = timeDiff + 's';
+            showTime = timeDiff + 'sec';
         }
         else if (timeDiff >= 60 && timeDiff < 3600) {
             timeDiff = Math.round(timeDiff / 60);
-            showTime = timeDiff + 'm';
+            showTime = timeDiff + 'min';
         }
         else if (timeDiff >= 3600 && timeDiff < (3600 * 24)) {
             timeDiff = Math.round(timeDiff / 3600);
-            showTime = timeDiff + 'h';
+            showTime = timeDiff + 'hr';
         }
         else if (timeDiff >= (3600 * 24) && timeDiff < (3600 * 24 * 30)) {
             timeDiff = Math.round(timeDiff / (3600 * 24));
-            showTime = timeDiff + 'd';
+            showTime = timeDiff + 'days';
         }
         else if (timeDiff >= (3600 * 24 * 30) && timeDiff < (3600 * 24 * 30 * 12)) {
             timeDiff = Math.round(timeDiff / (3600 * 24 * 30));
-            showTime = timeDiff + 'm';
+            showTime = timeDiff + 'months';
+        }
+        else if (timeDiff >= (3600 * 24 * 30 * 12)) {
+            timeDiff = Math.round(timeDiff / (3600 * 24 * 30 * 12));
+            showTime = timeDiff + 'year';
         }
         
         return `<div id=${tweet._id} class="tweets">
