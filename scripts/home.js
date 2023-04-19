@@ -1,4 +1,9 @@
 
+let loginEmail = localStorage.getItem("twitterLoginEmail");
+
+if(!loginEmail) {
+    window.location.href = "index.html";
+}
 
 let tweetOffset = 0;
 let runningCriticalFunction = false;
@@ -6,7 +11,6 @@ let runningCriticalFunction = false;
 /*================= Function to get Tweets ==================================================================================*/
 
 async function getTweetsAndInsertHTML() {
-    console.log("Tweet btn clicked!");
     if(runningCriticalFunction) {
         return;
     }
@@ -253,7 +257,7 @@ let users = [
 ]
 
 
-let loginEmail = localStorage.getItem("twitterLoginEmail");
+// let loginEmail = localStorage.getItem("twitterLoginEmail");
 
 
 users.forEach((user) => {
@@ -309,6 +313,7 @@ document.addEventListener("click", (e) => {
 profileLogOut.addEventListener("click", () => {
 
     setTimeout(() => {
+        localStorage.removeItem("twitterLoginEmail");
         window.location.href = "index.html";
     }, 1000);
     
