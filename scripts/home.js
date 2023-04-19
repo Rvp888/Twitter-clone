@@ -132,9 +132,7 @@ document.addEventListener('click', async (event) => {
         
         document.querySelector('.tweet-post-text').value = "";
         alert(tweet.message);
-        setTimeout(async() => {
-            location.reload();
-        },2000);  
+        location.reload();  
     }
 
 /*================= Function to Delete Tweet ==================================================================================*/
