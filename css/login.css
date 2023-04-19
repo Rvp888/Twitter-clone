@@ -41,7 +41,7 @@ body {
     width: 100rem;
     margin: auto;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     list-style: none;
 }
 

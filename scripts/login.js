@@ -90,6 +90,7 @@ signUpBtn.addEventListener("click", () => {
                 );
                 localStorage.setItem("twitterSignUpData", JSON.stringify(signUpData));
                 setTimeout(()=>{
+                    reset();
                     alert("Account created successfully!");
                     signUpPage.style.display = "none";
                 },1000);
@@ -107,6 +108,7 @@ signUpBtn.addEventListener("click", () => {
             );
             localStorage.setItem("twitterSignUpData", JSON.stringify(signUpData));
             setTimeout(()=>{
+                reset();
                 alert("Account created successfully!");
                 signUpPage.style.display = "none";
             },1000);
@@ -114,6 +116,13 @@ signUpBtn.addEventListener("click", () => {
     }
     
 })
+
+function reset() {
+    nameInput.value = "";
+    emailInput.value = "";
+    passwordInput.value = "";
+    usernameInput.value = "";
+}
 
 
 
