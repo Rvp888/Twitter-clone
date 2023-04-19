@@ -341,7 +341,7 @@ const profile_logo = document.getElementById("nav-item-profile");
 const profile_left_arrow = document.getElementById("profile-left-arrow");
 const home_content = document.querySelector(".home-content");
 const profile_content = document.querySelector(".profile-content");
-const post_box_image = document.querySelector(".post-box-image");
+const postbox_profileImage = document.querySelector(".postBox-profile-img");
 
 
 
@@ -358,7 +358,7 @@ profile_left_arrow.addEventListener("click", () => {
     home_content.style.display = "block";
 });
 
-post_box_image.addEventListener("click", () => {
+postbox_profileImage.addEventListener("click", () => {
     profile_logo.style.fontWeight = "bold";
     home_content.style.display = "none";
     profile_content.style.display = "block";
