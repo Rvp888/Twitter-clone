@@ -131,6 +131,8 @@ document.addEventListener('click', async (event) => {
 
         document.querySelector('.tweet-post-text').value = "";
         alert(tweet.message);
+
+        getTweetsAndInsertHTML();
     }
 
 /*================= Function to Delete Tweet ==================================================================================*/
