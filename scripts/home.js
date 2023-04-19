@@ -343,7 +343,7 @@ function myFunction() {
 
 /*=================== Home to Profile navigation =====================*/ 
 
-
+const home_logo = document.getElementById("nav-item-home");
 const profile_logo = document.getElementById("nav-item-profile");
 const profile_left_arrow = document.getElementById("profile-left-arrow");
 const home_content = document.querySelector(".home-content");
@@ -359,16 +359,22 @@ profile_logo.addEventListener("click", () => {
     profile_content.style.display = "block";
 });
 
+postbox_profileImage.addEventListener("click", () => {
+    profile_logo.style.fontWeight = "bold";
+    home_content.style.display = "none";
+    profile_content.style.display = "block";
+});
+
 profile_left_arrow.addEventListener("click", () => {
     profile_logo.style.fontWeight = "lighter";
     profile_content.style.display = "none";
     home_content.style.display = "block";
 });
 
-postbox_profileImage.addEventListener("click", () => {
-    profile_logo.style.fontWeight = "bold";
-    home_content.style.display = "none";
-    profile_content.style.display = "block";
+home_logo.addEventListener("click", () => {
+    profile_logo.style.fontWeight = "lighter";
+    profile_content.style.display = "none";
+    home_content.style.display = "block";
 });
 
 
