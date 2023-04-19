@@ -341,7 +341,7 @@ const profile_logo = document.getElementById("nav-item-profile");
 const profile_left_arrow = document.getElementById("profile-left-arrow");
 const home_content = document.querySelector(".home-content");
 const profile_content = document.querySelector(".profile-content");
-const postbox_profileImage = document.querySelector(".postBox-profile-img");
+const postbox_profileImage = document.querySelector("#postBox-profile-img");
 
 
 
