@@ -6,6 +6,7 @@ let runningCriticalFunction = false;
 /*================= Function to get Tweets ==================================================================================*/
 
 async function getTweetsAndInsertHTML() {
+    console.log("Tweet btn clicked!");
     if(runningCriticalFunction) {
         return;
     }
@@ -128,11 +129,12 @@ document.addEventListener('click', async (event) => {
             alert(tweet.message);
             return;
         }
-
+        
         document.querySelector('.tweet-post-text').value = "";
         alert(tweet.message);
-
-        getTweetsAndInsertHTML();
+        setTimeout(async() => {
+            location.reload();
+        },2000);  
     }
 
 /*================= Function to Delete Tweet ==================================================================================*/
